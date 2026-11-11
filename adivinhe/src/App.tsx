@@ -2,8 +2,10 @@ import styles from "./app.module.css"
 
 import { Input } from "./components/Input"
 import { Tip } from "./components/Tip"
+import { Button } from "./components/Button"
 import { Letter } from "./components/Letter"
 import { Header } from "./components/Header"
+import { LetterUsed } from "./components/LettersUsed"
 
 
 export default function App(){
@@ -27,9 +29,12 @@ export default function App(){
     </div>
 
     <h4>Palpite</h4>
-    <div>
+    <div className={styles.guess}>
     <Input autoFocus maxLength={1} placeholder="?"/>
+    <Button title="Confirmar" />
     </div>
+
+    <LetterUsed />
     </main>
    
   </div>
